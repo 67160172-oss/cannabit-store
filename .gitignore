@@ -1,0 +1,6 @@
+# Logs and temporary files
+*.log
+.system_generated/
+
+# Redundant nested folder from zip extraction
+/cannabis-store/

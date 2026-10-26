@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ร้านกัญชาและคลังความรู้ (ต้นแบบ)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Noto+Serif+Thai:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="gate" hidden>
+  <form class="gatebox" id="gateForm" novalidate>
+    <svg width="44" height="44" viewBox="0 0 120 120" aria-hidden="true"><g transform="translate(60,88)" fill="currentColor"><rect x="-2" y="0" width="4" height="22" rx="2"/><ellipse cx="0" cy="-20" rx="7" ry="20" transform="rotate(-78)"/><ellipse cx="0" cy="-28" rx="7" ry="28" transform="rotate(-52)"/><ellipse cx="0" cy="-34" rx="7" ry="34" transform="rotate(-26)"/><ellipse cx="0" cy="-40" rx="7" ry="40"/><ellipse cx="0" cy="-34" rx="7" ry="34" transform="rotate(26)"/><ellipse cx="0" cy="-28" rx="7" ry="28" transform="rotate(52)"/><ellipse cx="0" cy="-20" rx="7" ry="20" transform="rotate(78)"/></g></svg>
+    <h1>ยืนยันอายุก่อนเข้าชม</h1>
+    <p>เว็บไซต์นี้มีข้อมูลและสินค้าเกี่ยวกับกัญชา เปิดให้เฉพาะผู้ที่มีอายุ 20 ปีขึ้นไป กรุณากรอกวันเกิดของคุณ</p>
+    <div class="field">
+      <label for="gateDob">วันเกิด</label>
+      <input type="date" id="gateDob" required>
+    </div>
+    <p class="err" id="gateErr" role="alert"></p>
+    <button class="btn" type="submit">เข้าสู่เว็บไซต์</button>
+  </form>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <button class="brand" data-act="go" data-view="shop" aria-label="ไปหน้าร้าน">
+      <svg width="34" height="34" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="58" fill="var(--forest)"/><g transform="translate(60,86)" fill="var(--forest-ink)"><rect x="-2" y="0" width="4" height="16" rx="2"/><ellipse cx="0" cy="-15" rx="6" ry="15" transform="rotate(-76)"/><ellipse cx="0" cy="-22" rx="6" ry="22" transform="rotate(-50)"/><ellipse cx="0" cy="-27" rx="6" ry="27" transform="rotate(-24)"/><ellipse cx="0" cy="-32" rx="6" ry="32"/><ellipse cx="0" cy="-27" rx="6" ry="27" transform="rotate(24)"/><ellipse cx="0" cy="-22" rx="6" ry="22" transform="rotate(50)"/><ellipse cx="0" cy="-15" rx="6" ry="15" transform="rotate(76)"/></g></svg>
+      <span><b>ใบเขียว</b><small>ร้านกัญชาและคลังความรู้</small></span>
+    </button>
+    <nav class="main" id="nav" aria-label="เมนูหลัก"></nav>
+  </div>
+</header>
+
+<main class="wrap" id="app" tabindex="-1"></main>
+
+<footer>
+  <div class="wrap">
+    <p>ระบบต้นแบบเพื่อการศึกษา ไม่มีการขายสินค้าจริง กฎหมายกัญชาในประเทศไทยเปลี่ยนแปลงบ่อย ทั้งเรื่องอายุผู้ซื้อ ใบสั่งจากแพทย์สำหรับช่อดอก ใบอนุญาตร้าน และข้อจำกัดการขายออนไลน์และการโฆษณา ควรตรวจสอบข้อกำหนดล่าสุดกับ อย. หรือกระทรวงสาธารณสุขก่อนนำไปใช้จริง</p>
+    <p>จัดทำโดย นาย พชรพล พรหมมา 67160172 · <a href="admin.html" class="linkbtn" style="font-weight:600">⚙️ หน้าแอดมินหลังบ้าน (Admin Portal)</a> · <button class="linkbtn" data-act="reset">รีเซ็ตข้อมูลตัวอย่าง</button></p>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlgTitle">
+  <div class="dlghead"><h2 id="dlgTitle" style="font-size:1.15rem"></h2><button class="x" data-act="close-dlg" aria-label="ปิด">×</button></div>
+  <div class="dlgbody" id="dlgBody"></div>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
